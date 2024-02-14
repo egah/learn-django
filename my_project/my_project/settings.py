@@ -22,7 +22,6 @@ MEDIA_DIR = BASE_DIR / "media"
 
 # SECURITY WARNING: keep the secret ke
 # y used in production secret!
-SECRET_KEY = "django-insecure-l86d=2y_#_l-^lm=z)obb#i#zdjr8n-b%h!-0je0-hmo%0%wc2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
