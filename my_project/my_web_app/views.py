@@ -11,7 +11,7 @@ from django.views.generic import (
     DetailView,
     CreateView,
     DeleteView,
-    UpdateVie,
+    UpdateView,
 )
 from .models import SchoolModel, StudentModel
 

@@ -1,5 +1,5 @@
 import os 
-from my_project.settings import *
+from my_project.my_project.att import *
 
 import django_on_heroku
 
@@ -10,7 +10,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEBUG = False
 TEMPLATE_DEBUG = False
 
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 
 
 django_on_heroku.settings(locals())
