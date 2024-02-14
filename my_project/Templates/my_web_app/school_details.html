@@ -1,0 +1,49 @@
+{%extends "my_web_app/base.html"%}
+
+{% block body_block %}
+<style>
+    main {
+        background-color: bisque;;
+    }
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 50%; /* specify the width */
+    height: 50px;
+    }
+    .chge {
+        color: white;
+    }
+</style>
+<main>
+    <br></br>
+    <br></br>
+<div class="container jumbotron">
+    <h1>Information on {{school_details.name}}</h1>
+<h3>Principal : {{school_details.principal}}</h3>
+<h3>Emplacement : {{school_details.location}}</h3>
+<br></br>
+<h2>List of students</h2>
+<table border="3">
+    <tr>
+        <th>Nom</th>
+        <th>Age</th>
+    </tr>
+    {% for eleve in school_details.students.all %}
+    <tr>
+        <td>{{eleve.name}} </td>
+        <td>{{eleve.age}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br></br>
+    <br></br>
+<button class="btn btn-primary"><a class="chge" href="{% url 'update_view' pk=school_details.pk%}">Update</a></button>
+<button class="btn btn-danger"><a class="chge" href="{% url 'delete_view' pk=school_details.pk%}">Delete Page</a></button>
+<br></br>
+<br></br>
+</div>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'my_web_app/base.html' %}
+
+{% block body_block %}
+<style>
+    main {
+        background-color: bisque;
+    }
+</style>
+<main>
+    <br></br>
+<br></br>
+<br></br>
+
+<div class="container jumbotron">
+
+    <form action="" method="post">
+         {% csrf_token %}
+         {{user.as_p}}
+         {{info.as_p}}
+        <button type="submit" class="btn btn-primary">register</button>
+    </form>
+
+</div>
+<br></br>
+<br></br>
+<br></br>
+</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'my_web_app/base.html' %}
+
+{% block body_block %}
+<style>
+    .jumbotron {
+        background-color:cornflowerblue;
+    }
+</style>
+<br></br>
+<br></br>
+<br></br>
+<div class="container jumbotron">
+    <br></br>
+<br></br>
+
+    <form action="" method="post">
+        
+      {% csrf_token %}
+      {{ form.as_p}}
+        <input type="Submit" name="" value="SEND" placeholder="" class="btn btn-primary">
+    </form>
+    <br></br>
+<br></br>
+</div>
+<br></br>
+<br></br>
+{% endblock %}
+

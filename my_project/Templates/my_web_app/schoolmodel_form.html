@@ -1,0 +1,30 @@
+{% extends "my_web_app/base.html" %}
+
+{% block body_block%}
+<style>
+    header {
+        background-color: bisque;
+    }
+</style>
+<header>
+    <br></br>
+    <br></br>
+    <br></br>
+
+    <div class="container jumbotron">
+        {% if form.instance.pk %} 
+        <h2>Update school information</h2>
+        {% else %}
+        <h2>Create a new school</h2>
+        {% endif %}
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="Submit" value="submit" class="btn btn-primary">
+
+        </form>
+    </div>
+    <br></br>
+    <br></br>
+</header>
+{% endblock %}

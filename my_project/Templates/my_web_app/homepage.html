@@ -1,0 +1,28 @@
+{% extends 'my_web_app/base.html'%}
+
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+
+<header>
+   
+    <div class="jumbotron" id="epiph-pres">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {% load static %}
+                    <img src="{% static 'Images/picture-modified.png' %}" alt="Your Image" class="your-image">
+                </div>
+                <div class="col-md-6">
+                    <p class="presentation-text">Fort d’une expérience comme consultant en data science, je suis capable de comprendre des problématiques clients, d’y répondre de façon efficace et de mener des restitutions. Je comprends les besoins de données qu’une entreprise peut avoir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'my_web_app/base.html' %}
+
+{% block body_block %}
+<style>
+    header {background-color: bisque;
+    }
+    h1 {color: red;
+    }
+    ol {color: darkgreen;
+    }
+    #code-epip {color: white;
+
+    }
+</style>
+
+
+<header>
+    <br></br>
+<br></br>
+    <div  class="container jumbotron">
+        <h1>List of school in our data base</h1>
+        <p>
+            <ol>
+                {% for school in school_list %}
+                <h3>  <li><a href="{{school.id}}">{{school.name}}</a></li></h3>
+              {% endfor %}
+            </ol>
+        </p>
+        <button type="submit" class="btn btn-primary"><a id="code-epip" href="{% url 'create_view' %}">Add New School</a></button>
+
+       
+
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+
+</header>
+{% endblock %}

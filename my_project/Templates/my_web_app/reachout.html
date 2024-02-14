@@ -1,0 +1,27 @@
+{% extends 'my_web_app/base.html' %}
+
+{% block body_block %}
+<br></br>
+<br></br>
+<br></br>
+<style>
+    #form-epip { background-color:cornflowerblue
+
+    }
+</style>
+<div class="container jumbotron" id="form-epip">
+<br></br>
+<br></br>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" value="Send" placeholder="" name="" class="btn btn-primary">
+    </form>
+    <br></br>
+<br></br>
+</div>
+<br></br>
+<br></br>
+<br></br>
+{% endblock %}
