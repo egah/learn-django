@@ -1,5 +1,5 @@
 import os 
-from my_project.my_project.att import *
+from my_project.settings import *
 
 import django_on_heroku
 
